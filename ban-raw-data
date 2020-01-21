@@ -1,0 +1,235 @@
+{
+  "name": "ban",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "comment": "Permission Check",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#ff0f1e",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "NoPerm",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerm",
+      "message": "You do not have permission to use this command!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerm",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Checks for correct command params",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#ff0f1e",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Invalid",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Invalid",
+      "message": "Invalid parameters! Use (!ban \"@user\")",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Invalid",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Check if bot can ban user",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "varName2": "",
+      "iftrue": "2",
+      "iftrueVal": "20",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#ff0f1e",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Cantban",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Cantban",
+      "message": "I can not ban that user!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Cantban",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Bans user",
+      "color": "#00ff40",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Ban Member"
+    },
+    {
+      "title": "Successful",
+      "author": "",
+      "color": "#6aff0f",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Successful",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Successful",
+      "message": "Successfully banned ${mentionedUser}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Successful",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "fBgfd",
+  "_aliases": []
+}

@@ -1,0 +1,268 @@
+{
+  "name": "info",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "DpUCl",
+  "actions": [
+    {
+      "comment": "Permission Check",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#cc0000",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "NoPerms",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerms",
+      "message": "You do not have permission to use this command!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerms",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Parameter Check",
+      "color": "#004080",
+      "name": "Comment"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#cc0000",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "InvalidParam",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "InvalidParam",
+      "message": "Invalid parameters! Use (!info \"@user\")",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "InvalidParam",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Data",
+      "color": "#0080ff",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "14",
+      "storage": "1",
+      "varName2": "MemberJoinDate",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "age",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "14",
+      "storage": "1",
+      "varName2": "join",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "13",
+      "storage": "1",
+      "varName2": "rolelist",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberid",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "Embedded text",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "title": "Guild",
+      "author": "${tempVars(\"tag\")}",
+      "color": "#66ff99",
+      "url": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"avatar\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "fieldName": "Joined Server:",
+      "message": "${tempVars(\"join\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "fieldName": "Created Account:",
+      "message": "${tempVars(\"age\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "fieldName": "Roles:",
+      "message": "${tempVars(\"rolelist\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "fieldName": "Profile:",
+      "message": "<@${tempVars(\"memberid\")}>",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "fieldName": "Discord ID:",
+      "message": "${tempVars(\"memberid\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embeddedinfo",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": []
+}

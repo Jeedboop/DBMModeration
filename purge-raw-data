@@ -1,0 +1,216 @@
+{
+  "name": "purge",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "comment": "Permission Check",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_MESSAGES",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#ff0f1e",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "NoPerm",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerm",
+      "message": "You do not have permission to use this command!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "NoPerm",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Checks for correct command params",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Invalid",
+      "author": "",
+      "color": "#ff0f1e",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Invalid",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Invalid",
+      "message": "Invalid parameters! Use (!purge \"amount\")",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Invalid",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Stores amount then deletes bulk messages",
+      "color": "#00ff40",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "count": "${tempVars(\"amount\")}",
+      "condition": "0",
+      "custom": "",
+      "varName": "",
+      "name": "Delete Bulk Messages"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "title": "Successful",
+      "author": "",
+      "color": "#6aff0f",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Successful",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Successful",
+      "message": "Successfully deleted ${tempVars(\"amount\")} message(s)",
+      "name": "Set Embed Description"
+    },
+    {
+      "comment": "Sends successful message then deletes (The below requires delete bulk message mod)",
+      "color": "#00ff40",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "Successful",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "count": "1",
+      "option": "0",
+      "msgid": "",
+      "Con0": "",
+      "Con1": "",
+      "Con2": "2",
+      "Con3": "",
+      "Con4": "",
+      "Con5": "0",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Delete Bulk Messages MOD"
+    }
+  ],
+  "_id": "JPjLj",
+  "_aliases": []
+}
